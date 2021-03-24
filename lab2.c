@@ -16,6 +16,5 @@ int main()
     }
     else
         printf("X ne podhodit \n");
-    printf("hello \n");
     return 0;
 }
