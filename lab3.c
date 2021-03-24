@@ -11,8 +11,11 @@ int main()
     printf("__________________________\n");
     for(x=0; x<1.6; x+=h)
     {
-        f=exp(sin(2*x));
-        printf("%8.3f\t %8.4f\n", x, f);
+        if (x!=0)
+        {
+            f=exp(sin(2*x));
+            printf("%8.3f\t %8.4f\n", x, f);
+        }
     }
     return 0;
 }
