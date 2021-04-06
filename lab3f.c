@@ -9,13 +9,13 @@ int main()
     scanf("%f", &h);
     printf("\tx\t f(x)\n");
     printf("__________________________\n");
-    for(x=0; x<1.6; x+=h)
+    for(x=-1.5;x<=1.5;x+=h)
     {
-        if (x!=0)
-        {
+        if (x<=0)
+            f=(pow(x,2)-2*(pow(x,3)))*cos(pow(x,2));
+        else
             f=exp(sin(2*x));
-            printf("%8.3f\t %8.4f\n", x, f);
-        }
+        printf("%8.2f\t %8.4f\n", x, f);
     }
     return 0;
 }

@@ -2,7 +2,7 @@
 
 int main()
 {
-  int k, a, b, x;
+  int a, b, x;
   printf("vvedite a\t");
   scanf("%d", &a);
   printf("vvedite b\t");
