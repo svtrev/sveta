@@ -5,11 +5,11 @@ int main()
 
 {
     float x, y, z;
-    printf("vvedite x \t");
+    printf("Enter x {-2.4 < x < 0.29} -> \t");
     scanf("%f", &x);
-    y=acos((2*x)/(pow(x,2)+1));
-    if (sin(pi/y)>0)
+    if (x>-2.4 && x<0.29)
     {
+        y=acos((2*x)/(pow(x,2)+1));
         z=log(sin(M_PI/y));
         printf ("y= %f \nz= %f \n", y, z);
     }
