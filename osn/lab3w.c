@@ -2,22 +2,25 @@
 #include <stdio.h>
 
 int main()
-
 {
-    float f, h, x;
+    float f, h, x, n, x0;
+    int i;
     printf("Введите шаг h=");
     scanf("%f", &h);
     printf("\tx\t f(x)\n");
     printf("__________________________\n");
-    x=-1.5;
-    while (x<=1.5)
+    n = (1.5 - (-1.5)) / h;
+    x0 = -1.5;
+    i = 0;
+    while (i <= n)
     {
-        if (x<=0)
-            f=(pow(x,2)-2*(pow(x,3)))*cos(pow(x,2));
+        x = x0 + i * h;
+        if (x <= 0)
+            f = ((x * x) - 2 * (x * x * x)) * cos(x * x);
         else
-            f=exp(sin(2*x));
-        printf("%8.2f\t %8.4f\n", x, f);
-        x+=h;
+            f = exp(sin(2 * x));
+        printf("%f\t %8.4f\n", x, f);
+        i++;
     }
     return 0;
 }
