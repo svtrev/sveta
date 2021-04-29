@@ -1,32 +1,35 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
-# include <time.h>
-void fill( int n , int a[])
+#include <time.h>
+void fill(int n, int a[])
 {
-		int i;
+    int i;
     for (i = 0; i < n; i++)
     {
         a[i] = rand() % 51 - 25;
     }
 }
+void print(int n, int a[])
+{
+    int i;
+    for (i = 0; i < n; i++)
+        printf("%5d ", a[i]);
+    printf("\n");
+}
 int main()
 {
     int i, n, t, k, j, m = 0, c;
-		srand(time(NULL));
+    srand(time(NULL));
     printf("Vvedite kolvo elementov = ");
     scanf("%d", &n);
-		int A[n];
+    int A[n];
 
     fill(n, A);
 
-		for (i = 0; i < n; i++)
-    {
-        printf("%5d ", A[i]);
-    }
-    printf("\n");
+    print(n, A);
 
-		printf("Vvedite iskomoe chislo = ");
+    printf("Vvedite iskomoe chislo = ");
     scanf("%d", &k);
 
     for (i = 0; i < n; i++)
@@ -63,8 +66,6 @@ int main()
         }
     }
 
-    for (i = 0; i < n; i++)
-        printf("%5d ", A[i]);
-    printf("\n");
+    print(n, A);
     return 0;
 }
