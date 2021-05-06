@@ -64,7 +64,7 @@ void main()
         }
     }
 
-    if ((a < b || a > b) && sum1 < sum2)
+    if (sum1 < sum2)
         a = b;
     else
         b = a;
