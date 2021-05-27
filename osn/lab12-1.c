@@ -96,9 +96,9 @@ int maxTime(struct Club list[], int n, int mtime)
 
 void addClub(struct Club list[])
 {
-    struct Club fisrt = {"Romashka", "Mira", "night club", 17, 0, 19, 0, 0};
+    struct Club fisrt = {"Romashka", "Mira", "night", 17, 0, 19, 0, 0};
     struct Club second = {"Fialka", "Lenina", "restaraunt", 10, 0, 22, 30, 0};
-    struct Club third = {"Fenechka", "Dorozhkina", "time-cafe", 8, 0, 17, 30, 1};
+    struct Club third = {"Fenechka", "Dorozhkina", "time", 8, 0, 17, 30, 1};
 
     list[0] = fisrt;
     list[1] = second;
