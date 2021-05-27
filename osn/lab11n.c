@@ -12,6 +12,7 @@ struct Club
 };
 
 
+
 /* Ввод клуба в список */
 void inputClub(struct Club *list)
 {
@@ -87,31 +88,17 @@ int maxTime(struct Club list[], int n, int mtime)
 
 void addClubs(struct Club list[])
 {
-
-    strcpy(list[1].name, "Romashka");
-    strcpy(list[1].address, "Mira 39");
-    strcpy(list[1].theme, "night club");
-    list[1].openHours = 17;
-    list[1].openMinutes = 0;
-    list[1].closeHours = 19;
-    list[1].closeMinutes = 0;
-    list[1].karaoke = 0;
-
-    strcpy(list[2].name, "Fialka");
-    strcpy(list[2].address, "Lenina 21");
-    strcpy(list[2].theme, "restaraunt");
-    list[2].openHours = 10;
-    list[2].openMinutes = 0;
-    list[2].closeHours = 22;
-    list[2].closeMinutes = 30;
-    list[2].karaoke = 0;
+    struct Club h = {"Romashka", "Mira 39", "night club", 17, 0, 19, 0, 0};
+    struct Club z  = {"Fialka", "Lenina 21", "restaraunt", 10, 0, 22, 30, 0};
+    list[1] = h;
+    list[2] = z;
 }
 
 
 int main()
 {
     struct Club *list = NULL, temp;
-    int i, j, key;
+    int i, j, s, key;
     int num, n = 3, mtime = 0;
 
     list = (struct Club *) malloc(n * sizeof(int));
@@ -184,8 +171,16 @@ int main()
 
             case 4:  /* Караоке */
                 for(i = 0; i < n; i++)
+                {
                     if(list[i].karaoke == 1)
+                    {
                         printList(&list[i]);
+                        s++;
+                    }
+                }
+                if (s == 0)
+                    printf ("\nКлубов с караоке нет!\n");
+
                 break;
 
             case 5:  /* Дольше всех работает */
